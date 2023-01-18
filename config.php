@@ -7,4 +7,7 @@ function conexao($sql) {
   $conx = new mysqli($server, $userna, $passwd, $dbname);
   return $conx->query($sql);
 }
+
+DEFINE('API', "");
+DEFINE('URL', "https://api.telegram.org/bot" );
 ?>
