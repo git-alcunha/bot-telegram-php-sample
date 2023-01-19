@@ -11,11 +11,8 @@ $message = $update["message"]["text"];
 
 */
 if(isset($_POST['submit'])) {
-  $data = [
-    'chat_id' => $_POST['num_id'], 
-    'text' => $_POST['message']
-  ];
-  file_get_contents(URL . API . "/sendMessage?" . http_build_query($data) );	
+  $url = URL . API . "/sendMessage?chat_id=" . $_POST['num_id'] . "&text=" . $_POST['message'];
+  file_get_contents($url);	
 }
 ?>
 
